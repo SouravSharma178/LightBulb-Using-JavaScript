@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Using JavaScript</title>
+    <style>
+     #heading{
+       display: flex;
+       margin: auto;
+       align-items: center;
+       justify-content: center;
+     }
+     #container{
+        height: 100vh;
+     }
+     #lightbulb{
+        margin: auto;
+        align-items: center;
+        border: 1px solid blue;
+        height: 250px;
+        margin-top: 50px;
+        width: 400px;
+        border-top-right-radius: 500px;
+        border-top-left-radius: 500px;
+        border-bottom-right-radius: 500px;
+        border-bottom-left-radius: 500px;
+        background-color: yellow;
+     }
+     #switch{
+        display: flex;
+        margin: auto;
+        align-items: center;
+        height: 100px;
+        border: 2px solid grey;
+        width: 100px;
+        background-color: grey;
+     }
+     #btn{
+        display: flex;
+        margin: auto;
+        align-items: center;
+        cursor: pointer;
+     }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Light Bulb Using JavaScript</h1>
+<div id="container">
+    <div id="lightbulb">
+    </div>
+    <div id="switch">
+     <button id="btn" onclick="SwitchOn()">Switch</button>
+    </div>
+</div>
+    <script>
+let cont = document.getElementById('container');
+let bulb = document.getElementById('lightbulb');
+let butt = document.getElementById('btn');
+function SwitchOn(){
+    if(bulb.style.backgroundColor!='yellow'){
+        bulb.style.backgroundColor='yellow';
+        butt.textContent = 'Switch Off';
+    }
+    else{
+        bulb.style.backgroundColor='white';
+        butt.textContent = 'Switch On';
+    }
+}
+    </script>
+</body>
+</html>
